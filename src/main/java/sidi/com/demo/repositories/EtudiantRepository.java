@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Repository
 public class EtudiantRepository {
 
-    private ArrayList<Etudiant> etudiants;
+    private final ArrayList<Etudiant> etudiants;
 
     public EtudiantRepository() {
         this.etudiants = new ArrayList<>();
@@ -45,7 +45,6 @@ public class EtudiantRepository {
     public ArrayList<Etudiant> getall() {
         return this.etudiants;
     }
-
 
     public int deleteEtudiant(int id) {
         int position = this.rechercherEtudiant(id);
